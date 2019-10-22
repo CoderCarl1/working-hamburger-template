@@ -94,7 +94,7 @@
         -ms-grid-row-align: center;
         align-self: center;
     background: #ccc;
-    width: 40px;
+    width: 15px;
   }
   .top-menu {
     -webkit-transform: translateY(-100%);
