@@ -94,6 +94,8 @@
         -ms-grid-row-align: center;
         align-self: center;
     background: #ccc;
+    line-height: 55px;
+    border: 1px solid black;
     width: 15px;
   }
   .top-menu {
@@ -225,6 +227,20 @@
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -240,6 +256,7 @@ a {
   height: 60px;
   border: 2px ridge black;
   min-width: 400px;
+  width: 95vw;
 }
 
 content {
