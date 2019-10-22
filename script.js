@@ -9,15 +9,12 @@
 
 
 var menuToggle = document.querySelector("#menu-toggle");
-var menu = document.querySelector("#menu");
-console.log('before');
+var topMenu = document.querySelector(".top-menu");
 
 menuToggle.addEventListener("click", () => {
-    console.log('during');
-        if (menu.className != "active") {
-          menu.className = "active";
+        if (topMenu.className != "active top-menu") {
+            topMenu.className = "active top-menu";
         } else {
-          menu.className = "";
+            topMenu.className = "hidden top-menu";
         }
-        console.log('after');
       });

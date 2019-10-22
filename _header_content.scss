@@ -7,22 +7,12 @@
   text-align: center;
   box-sizing: border-box;
   float: left;
-  // font-weight: 700px;
+  font-weight: 700px;
   text-decoration: none;
   border: 1px solid black;
 }
-#menu-toggle {
-  display: block;
-  top: 5px;
-  right: 5px;
-  padding: 0 20px;
-  margin: 0;
-  justify-content: center;
-  align-self: center;
-  background: #ccc;
-}
 
-#menu {
+.top-menu {
   padding: 0;
   margin: 0;
 
@@ -60,7 +50,6 @@
         li {
           display: block;
           background: rgb(100, 195, 207);
-          // color: rgb(99, 211, 117);
           list-style: none;
           text-align: center;
           font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -85,22 +74,29 @@
 }
 
 @media screen and (max-width: 699px) {
-  .active{
-    display: flex;
+  #menu-toggle {
+    display: block;
+    top: 5px;
+    right: 5px;
+    padding: 0 20px;
+    margin: 0;
+    justify-content: center;
+    align-self: center;
+    background: #ccc;
+    width: 40px;
   }
-  #menu {
-    display: none;
+  .top-menu {
+    transform: translateY(-100%);
     position: relative;
     width: 100%;
-    // flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: calc(100vh);
+    height: 100vh;
+    z-index: 1;
     // //   1st ul within the Nav
     .menu-selection {
       display: grid;
-      grid-template-rows: 60px;
-      grid-auto-rows: 120px;
+      grid-template-rows: 60px 120px 60px;
       padding: 0;
       margin: 0;
       gap: 5px 0px;
@@ -113,30 +109,34 @@
         // 2nd ul within the Nav
         a{
           display: flex;
-          // flex-direction: column;
           justify-content: center;
           align-content: center;
-          // display: block;
           height: 100%;
         }
         .menu-content {
           height: 75px;
           li{
-            // margin: 2px;
             border: 1px solid red;
-            
             height: 25px;
           }
         }
       }
     }
   }
+  .active{
+    transform: translateY(0%);
+    transition: 500ms ease-out;
+  }
+  .hidden{
+    transform: translateY(-100%);
+    transition: 500ms ease-in;
+  }
 }
 @media screen and (min-width: 700px) {
   #menu-toggle {
     display: none;
   }
-  #menu {
+  .top-menu {
     width: 100%;
     display: flex;
     justify-content: end;

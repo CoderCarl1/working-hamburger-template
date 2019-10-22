@@ -8,31 +8,17 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   float: left;
+  font-weight: 700px;
   text-decoration: none;
   border: 1px solid black;
 }
 
-#menu-toggle {
-  display: block;
-  top: 5px;
-  right: 5px;
-  padding: 0 20px;
-  margin: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background: #ccc;
-}
-
-#menu {
+.top-menu {
   padding: 0;
   margin: 0;
 }
 
-#menu li {
+.top-menu li {
   display: block;
   background: #64c3cf;
   color: #63d375;
@@ -41,35 +27,35 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-#menu li a {
+.top-menu li a {
   display: block;
   text-decoration: none;
 }
 
-#menu li a:visited, #menu li a:active {
+.top-menu li a:visited, .top-menu li a:active {
   color: white;
 }
 
-#menu li:hover {
+.top-menu li:hover {
   background-color: white;
 }
 
-#menu li:hover a {
+.top-menu li:hover a {
   color: black;
 }
 
-#menu .menu-selection {
+.top-menu .menu-selection {
   background: #110916;
 }
 
-#menu .menu-selection li .menu-content {
+.top-menu .menu-selection li .menu-content {
   border: 1px ridge black;
   background: coral;
   padding: 0;
   margin: 0;
 }
 
-#menu .menu-selection li .menu-content li {
+.top-menu .menu-selection li .menu-content li {
   display: block;
   background: #64c3cf;
   list-style: none;
@@ -77,45 +63,56 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-#menu .menu-selection li .menu-content li a {
+.top-menu .menu-selection li .menu-content li a {
   display: block;
   text-decoration: none;
 }
 
-#menu .menu-selection li .menu-content li a:visited, #menu .menu-selection li .menu-content li a:active {
+.top-menu .menu-selection li .menu-content li a:visited, .top-menu .menu-selection li .menu-content li a:active {
   color: white;
 }
 
-#menu .menu-selection li .menu-content li:hover {
+.top-menu .menu-selection li .menu-content li:hover {
   background-color: white;
 }
 
-#menu .menu-selection li .menu-content li:hover a {
+.top-menu .menu-selection li .menu-content li:hover a {
   color: black;
 }
 
 @media screen and (max-width: 699px) {
-  .active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  #menu-toggle {
+    display: block;
+    top: 5px;
+    right: 5px;
+    padding: 0 20px;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background: #ccc;
+    width: 40px;
   }
-  #menu {
-    display: none;
+  .top-menu {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
     position: relative;
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    height: calc(100vh);
+    height: 100vh;
+    z-index: 1;
   }
-  #menu .menu-selection {
+  .top-menu .menu-selection {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 60px;
-        grid-template-rows: 60px;
-    grid-auto-rows: 120px;
+    -ms-grid-rows: 60px 120px 60px;
+        grid-template-rows: 60px 120px 60px;
     padding: 0;
     margin: 0;
     gap: 5px 0px;
@@ -123,12 +120,12 @@
     width: 100%;
     border: 1px solid blue;
   }
-  #menu .menu-selection li {
+  .top-menu .menu-selection li {
     width: 100%;
     display: -ms-grid;
     display: grid;
   }
-  #menu .menu-selection li a {
+  .top-menu .menu-selection li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -139,12 +136,24 @@
         align-content: center;
     height: 100%;
   }
-  #menu .menu-selection li .menu-content {
+  .top-menu .menu-selection li .menu-content {
     height: 75px;
   }
-  #menu .menu-selection li .menu-content li {
+  .top-menu .menu-selection li .menu-content li {
     border: 1px solid red;
     height: 25px;
+  }
+  .active {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: 500ms ease-out;
+    transition: 500ms ease-out;
+  }
+  .hidden {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: 500ms ease-in;
+    transition: 500ms ease-in;
   }
 }
 
@@ -152,7 +161,7 @@
   #menu-toggle {
     display: none;
   }
-  #menu {
+  .top-menu {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -164,7 +173,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  #menu .menu-selection {
+  .top-menu .menu-selection {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -182,11 +191,11 @@
     width: 100%;
     height: 60px;
   }
-  #menu .menu-selection li {
+  .top-menu .menu-selection li {
     position: relative;
     width: 120px;
   }
-  #menu .menu-selection li .menu-content {
+  .top-menu .menu-selection li .menu-content {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -201,17 +210,17 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #menu .menu-selection li .menu-content li {
+  .top-menu .menu-selection li .menu-content li {
     display: none;
   }
-  #menu .menu-selection li:hover .menu-content li, #menu .menu-selection li:active .menu-content li, #menu .menu-selection li:focus-within .menu-content li {
+  .top-menu .menu-selection li:hover .menu-content li, .top-menu .menu-selection li:active .menu-content li, .top-menu .menu-selection li:focus-within .menu-content li {
     display: block;
     cursor: pointer;
     z-index: 1;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  #menu .menu-selection li:hover .menu-content li a, #menu .menu-selection li:active .menu-content li a, #menu .menu-selection li:focus-within .menu-content li a {
+  .top-menu .menu-selection li:hover .menu-content li a, .top-menu .menu-selection li:active .menu-content li a, .top-menu .menu-selection li:focus-within .menu-content li a {
     display: block;
   }
 }
