@@ -1,0 +1,27 @@
+@import 'header_content';
+
+
+a {
+    text-decoration: none;
+}
+
+
+#navbar{
+position: relative;
+display: flex;
+justify-content: space-between;
+height: 60px;
+border: 2px ridge black;
+min-width: 400px;
+}
+
+content{
+    position: relative;
+    display: grid;
+}
+#footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
