@@ -1,3 +1,36 @@
+// ==== USE this menu template in html ===
+
+// <nav id=navbar>
+//   <a href="index.html" id="logo"><img src="" alt="LOGO"></img></a>
+//   <section class="top-menu">
+//     <ul class="menu-selection">
+//       <li><a href="#">MENU 1</a></li>
+//       <li><a href="#">MENU 2</a>
+//         <ul class="menu-content">
+//           <li><a href="#">SUB 1</a></li>
+//           <li><a href="#">SUB 2</a></li>
+//           <li><a href="#">SUB 3</a></li>
+//         </ul>
+//       </li>
+//       <li><a href="#">MENU 3</a></li>
+//     </ul>
+//   </section>
+//   <a href="#" id=menu-toggle class="fas fa-bars" alt="=" title="menu toggle">MENU</a>
+// </nav>
+
+// ==== USE this JS for Menu Hiding  ====
+// var menuToggle = document.querySelector("#menu-toggle");
+// var topMenu = document.querySelector(".top-menu");
+
+// menuToggle.addEventListener("click", () => {
+//         if (topMenu.className != "active top-menu") {
+//             topMenu.className = "active top-menu";
+//         } else {
+//             topMenu.className = "hidden top-menu";
+//         }
+//       });
+
+
 #logo {
   color: purple;
   height: 60px;
