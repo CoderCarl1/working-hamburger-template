@@ -14,13 +14,16 @@ a {
 
 
 #navbar{
+    top: 5px;
 position: relative;
 display: flex;
 justify-content: space-between;
 height: 60px;
-border: 2px ridge black;
+
 min-width: 400px;
 width: 95vw;
+left: 2.5vw;
+border-radius: 25px;
 }
 
 content{

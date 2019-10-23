@@ -42,7 +42,7 @@
   float: left;
   font-weight: 700px;
   text-decoration: none;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 .top-menu {
@@ -107,18 +107,25 @@
 }
 
 @media screen and (max-width: 699px) {
+  #navbar{
+    border: none;
+  }
   #menu-toggle {
     display: block;
     top: 5px;
     right: 5px;
     padding: 0 20px;
-    margin: 0;
+    margin-left: 20px;
     justify-content: center;
     align-self: center;
     background: #ccc;
-    line-height: 55px;
-    border: 1px solid black;
-    width: 15px;
+    line-height: 60px;
+    border: .5px solid black;
+    border-radius: 5px;
+    z-index: 3;
+    // border-bottom: 3px solid black;
+    // border-right: 2px solid black;
+    // width: 15px;
   }
   .top-menu {
     transform: translateY(-100%);
@@ -168,6 +175,9 @@
   }
 }
 @media screen and (min-width: 700px) {
+  #navbar{
+    border: 2px ridge black;
+  }
   #menu-toggle {
     display: none;
   }
@@ -178,6 +188,7 @@
     align-items: center;
     //   1st ul within the Nav
     .menu-selection {
+      border-radius: 0px 25px 25px 0px;
       display: flex;
       flex-direction: row;
       align-items: center;
