@@ -7,9 +7,14 @@ body {
     flex-direction: column;
     width: 100vw;
     overflow: hidden;
+    background: whitesmoke;
 }
 a {
     text-decoration: none;
+// This makes buttons appear animated when clicked
+    // &:active{
+    //     transform: scale(0.98);
+    // }
 }
 
 
