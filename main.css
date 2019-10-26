@@ -19,8 +19,8 @@
 
 .top-menu li {
   display: block;
-  background: #64c3cf;
-  color: #63d375;
+  background: black;
+  color: white;
   list-style: none;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -43,20 +43,14 @@
   color: black;
 }
 
-.top-menu .menu-selection {
-  background: #110916;
-}
-
 .top-menu .menu-selection li .menu-content {
   border: 1px ridge black;
-  background: inherit;
   padding: 0;
   margin: 0;
 }
 
 .top-menu .menu-selection li .menu-content li {
   display: block;
-  background: #64c3cf;
   list-style: none;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -65,18 +59,16 @@
 .top-menu .menu-selection li .menu-content li a {
   display: block;
   text-decoration: none;
+  background-color: grey;
 }
 
 .top-menu .menu-selection li .menu-content li a:visited, .top-menu .menu-selection li .menu-content li a:active {
-  color: white;
-}
-
-.top-menu .menu-selection li .menu-content li:hover {
-  background-color: white;
+  color: black;
 }
 
 .top-menu .menu-selection li .menu-content li:hover a {
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 @media screen and (max-width: 699px) {
@@ -87,7 +79,7 @@
     display: block;
     top: 5px;
     right: 5px;
-    padding: 0 20px;
+    padding: 0px 20px;
     margin-left: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -112,7 +104,6 @@
     text-align: center;
     height: 100vh;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.4);
   }
   .top-menu .menu-selection {
     display: -ms-grid;
@@ -152,20 +143,17 @@
     height: 75px;
   }
   .top-menu .menu-selection li .menu-content li a {
-    background-color: grey;
+    margin: 0;
     height: 25px;
-    border-left: 2px solid black;
-    border-top: 2px solid black;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    border: 1px ridge rgba(0, 0, 0, 0.5);
   }
   .active {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     -webkit-transition: 250ms ease-out;
     transition: 250ms ease-out;
-    -webkit-box-shadow: 0 0 0 25vw rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 0 25vw rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 0 25vw rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 0 25vw rgba(0, 0, 0, 0.4);
   }
   .hidden {
     -webkit-transform: translateY(-100%);
