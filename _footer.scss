@@ -1,0 +1,30 @@
+@import "variables";
+
+#footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  width: 100vw;
+//   z-index: 4;
+//   bottom: 0;
+//   left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: $foot-bg;
+  #btm-nav-links {
+    list-style: none;
+  }
+  #footer-social {
+    height: 95%;
+    width: 100px;
+    background-color: $nav-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    // margin-bottom: 15px;
+  }
+}

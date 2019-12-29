@@ -1,0 +1,19 @@
+@import "variables";
+
+#content{
+    position: relative;
+    width: 100vw;
+    // top: 300px;
+    // left: 0;
+    display: grid;
+    grid-template-columns: 40px 50px auto;
+    grid-template-rows: 25% 100px auto;
+    // height: 1700px;
+    background-color: $content-bg;
+    // justify-content: center;
+}
+// #vid-player{
+// }
+section{
+    border: 1px solid black;
+}

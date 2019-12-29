@@ -1,4 +1,4 @@
-@import 'header_content', 'variables';
+@import 'navbar', 'content', 'footer', 'variables';
 
 body {
     margin: 0;
@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    overflow: hidden;
+    // overflow: hidden;
     background: $body-bg;
 }
 a {
@@ -16,28 +16,15 @@ a {
     //     transform: scale(0.98);
     // }
 }
-
-
 #navbar{
-    top: 5px;
+top: 5px;
 position: relative;
 display: flex;
 justify-content: space-between;
-height: 60px;
-
 min-width: 400px;
 width: 95vw;
 left: 2.5vw;
-border-radius: 25px;
+// border-radius: 25px;
 }
 
-content{
-    position: relative;
-    display: grid;
-}
-#footer{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
